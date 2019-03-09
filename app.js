@@ -3,7 +3,8 @@ const bodyParser = require('body-parser');
 const mongodb = require('mongodb');
 const socket = require('socket.io');
 //const port = 3000;
-const port = process.env.PORT || 8080;
+// for online purpose use V
+const port = process.env.PORT || 8080; 
 let users;
 let count;
 let chatRooms;
@@ -75,7 +76,7 @@ MongoClient.connect('mongodb://vaibhav:vaibhav96@ds161335.mlab.com:61335/heroku_
 }); 
 
 app.get('/', (req, res, next) => {
-    res.send('Welcome to the express server...');
+    res.send('Welcome to the todos chat express server...');
 });
 
 // Signup API 
