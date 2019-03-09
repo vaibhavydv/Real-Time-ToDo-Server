@@ -25,13 +25,13 @@ app.use((req, res, next) => {
 });
 
 
-MongoClient.connect('mongodb://vaibhav:vaibhav96@ds161335.mlab.com:61335/heroku_zsv25gb2', (err, Database) => {
+MongoClient.connect('mongodb://vaibhav:vaibhav96@ds161285.mlab.com:61285/heroku_f7s8ld2g', (err, Database) => {
     if(err) {
         console.log(err);
         return false;
     }
     console.log("Connected to Online Database MongoDB");
-    const db = Database.db("heroku_zsv25gb2");
+    const db = Database.db("heroku_f7s8ld2g");
     users = db.collection("users");
     chatRooms = db.collection("chatRooms");
     const server = app.listen(port, () => {
