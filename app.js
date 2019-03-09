@@ -159,8 +159,12 @@ app.get('/api/chatroom/:room', (req, res, next) => {
     chatRooms.find({name: room}).toArray((err, chatroom) => {
         if(err) {
             console.log(err);
-            return false;
         }
-        res.json(chatroom[0].messages);
+     try{
+       res.json(chatroom[0].messages);
+      } 
+     catch(e){
+     console.log("Error : " + e);
+      }
     });
 });
