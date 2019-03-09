@@ -76,7 +76,11 @@ MongoClient.connect('mongodb://vaibhav:vaibhav96@ds161285.mlab.com:61285/heroku_
 }); 
 
 app.get('/', (req, res, next) => {
-    res.send('Welcome to the todos chat express server...');
+    res.send('Real time todos API \n check status using url/api/check');
+});
+
+app.get('/api/check' , (req, res, next) =>{
+    res.send('API Working with users,login and chatroom url \n by - Vaibhav Yadav');
 });
 
 // Signup API 
